@@ -1,0 +1,61 @@
+<html>
+<head>
+<title> 
+    Tarefa
+</title> 
+</head> 
+<body> 
+<script>
+        
+    /* Tarefa 4 */
+    var numero1 = prompt("Digite o primeiro número:")
+    var numero2 = prompt("Digite o segundo número:")
+
+    var operacao = prompt("Digite a operação + - / *")
+    
+    var erro = false
+
+    if (!(typeof numero1 === 'number')) {
+        alert("Digite um número para o cálculo")
+        erro = true
+    }
+
+    if (!(typeof numero2 === 'number')) {
+        alert("Digite um número para o cálculo")
+        erro = true
+    }
+
+    if (!(operacao == '*' || operacao == '/' || operacao == '-' || operacao == '+')){
+        alert("Digite uma operação válida.")
+        erro = true
+    }
+
+    if (operacao == '/' && numero2 == '0'){
+        alert("Não é possível fazer divisão por zero.")
+        erro = true
+    }
+
+    if (!erro){
+        var resultado = 0
+
+        switch(operacao){
+            case "/":
+                resultado = parseInt(numero1) / parseInt(numero2)
+                break;
+            case "*":
+                resultado = parseInt(numero1) * parseInt(numero2)
+                break;
+            case "-":
+                resultado = parseInt(numero1) - parseInt(numero2)
+                break;
+            case "+":
+                resultado = parseInt(numero1) + parseInt(numero2)
+                break;
+        }
+        
+        alert("Resultado " + resultado)
+    }
+
+</script>
+</body> 
+</html> 

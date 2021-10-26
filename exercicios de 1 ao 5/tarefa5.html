@@ -1,0 +1,51 @@
+<html>
+<head>
+<title> 
+    Tarefa
+</title> 
+</head> 
+<body> 
+<script>
+        
+    /* Tarefa 5 */
+    function isFloat(x) { 
+        return n != "" && !isNaN(n) && Math.round(n) != n;
+    }
+
+    var nota1 = prompt("Digite o primeira nota:")
+    var nota2 = prompt("Digite o segunda nota:")
+    var nota3 = prompt("Digite o terceira nota:")
+   
+    var erro = false
+
+    if (!isFloat(nota1)) {
+        alert("Digite uma nota 1 valida")
+        erro = true
+    }
+
+    if (!isFloat(nota2)) {
+        alert("Digite uma nota 1 valida")
+        erro = true
+    }
+
+    if (!isFloat(nota3)) {
+        alert("Digite uma nota 1 valida")
+        erro = true
+    } 
+
+    
+    var resultado = ((nota1) + (nota2) + (nota3)) / 3
+
+    if (resultado < 5)
+        alert("Reprovado")
+    
+    if (resultado >=  5 && resultado <= 7)
+        alert("Em recuperação")
+    
+    if (resultado > 7)
+        alert("Aprovado")        
+    
+
+</script>
+</body> 
+</html> 
